@@ -1,10 +1,10 @@
 param(
     [string]$path,
     [string]$solutionName = "Solution",
+    [string]$applicationName = "Solution.App",
     [Parameter(Position = 0)]
     [ValidateSet('console', 'mvc')]
-    [string]$Applicationtype = "console",
-    [string]$ApplicationName = "Solution.App"
+    [string]$applicationtype = "console"
 )
 
 if($path -eq $null -or $path -eq "" -or $path -eq " ") {
@@ -19,7 +19,7 @@ mkdir src
 
 Set-Location src
 
-dotnet new $Applicationtype -n $ApplicationName
+dotnet new $applicationtype -n $applicationName
 
 Set-Location ..
 
