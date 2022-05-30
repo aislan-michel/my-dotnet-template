@@ -1,4 +1,4 @@
-##My dotnet template
+## My dotnet template
 
 this script initialized git repository and creates an simple arch for my personal projects
 
