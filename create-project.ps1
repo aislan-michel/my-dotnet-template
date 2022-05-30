@@ -11,7 +11,15 @@ if($path -eq $null -or $path -eq "" -or $path -eq " ") {
     mkdir $solutionName
 
     Set-Location $solutionName
+}else{
+    Set-Location $path
+
+    mkdir $solutionName
+
+    Set-Location $solutionName
 }
+
+git init
 
 dotnet new sln -n $solutionName
 
@@ -23,4 +31,4 @@ dotnet new $applicationtype -n $applicationName
 
 Set-Location ..
 
-Write-Host "say cd " + $solutionName + " and start a coding"
+Write-Host "say cd " $solutionName " and start a coding"
