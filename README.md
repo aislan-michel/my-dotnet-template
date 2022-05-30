@@ -1,6 +1,6 @@
 ## My dotnet template
 
-this script initialized git repository and creates an simple arch .net apps
+this script initialized git repository and creates an simple template for .net apps
 
 ### requirements
 
