@@ -31,4 +31,7 @@ dotnet new $applicationtype -n $applicationName
 
 Set-Location ..
 
-Write-Host "say cd " $solutionName " and start a coding"
+Write-Host "say 'cd" $solutionName"'" "and start a coding"
+
+write-host "`r`npress any key to continue.."
+[Console]::ReadKey()
