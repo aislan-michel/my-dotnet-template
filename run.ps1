@@ -31,7 +31,13 @@ dotnet new $applicationType -n $applicationName
 
 Set-Location ..
 
-Write-Host "say 'cd" $solutionName"'" "and start a coding"
+$csprojFilePath = "src/" + $applicationName + "/" + $applicationName + ".csproj"
+
+dotnet sln add $csprojFilePath
+
+git add .
+
+git commit -m 'create solution'
 
 write-host "`r`npress any key to continue.."
 [Console]::ReadKey()
