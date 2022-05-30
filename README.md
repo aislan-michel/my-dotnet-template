@@ -2,6 +2,11 @@
 
 this script initialized git repository and creates an simple arch .net apps
 
+### requirements
+
+- git
+- dotnet SDK of your choice
+
 ### parameters
 
 - path, the local of the folder of project is created
