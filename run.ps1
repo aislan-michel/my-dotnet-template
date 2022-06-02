@@ -34,7 +34,7 @@ try {
     
     Set-Location ..
     
-    $csprojFilePath = "src/" + $applicationName + "/" + $applicationName + ".csproj"
+    $csprojFilePath = "src/${applicationName}/${applicationName}.csproj"
     dotnet sln add $csprojFilePath
     
     if($gitignore.IsPresent){
