@@ -5,7 +5,8 @@ param(
     [Parameter(Position = 0)]
     [ValidateSet('console', 'mvc', 'webapp')]
     [string]$applicationType = "console",
-    [switch]$sqlFolder
+    [switch]$sqlFolder,
+    [switch]$gitignore
 )
 
 if(![string]::IsNullOrWhiteSpace($path)) {
@@ -34,6 +35,12 @@ Set-Location ..
 
 $csprojFilePath = "src/" + $applicationName + "/" + $applicationName + ".csproj"
 dotnet sln add $csprojFilePath
+
+if($gitignore.IsPresent){
+    git rm -r --cached .
+
+    dotnet new gitignore
+}
 
 git add .
 git commit -m 'create solution'
