@@ -4,7 +4,8 @@ param(
     [string]$applicationName = "Solution.App",
     [Parameter(Position = 0)]
     [ValidateSet('console', 'mvc')]
-    [string]$applicationType = "console"
+    [string]$applicationType = "console",
+    [switch]$sqlFolder
 )
 
 if($path -eq $null -or $path -eq "" -or $path -eq " ") {
@@ -24,6 +25,11 @@ git init
 dotnet new sln -n $solutionName
 
 mkdir src
+
+if($sqlFolder.IsPresent){
+    mkdir sql
+}
+
 Set-Location src
 
 dotnet new $applicationType -n $applicationName
