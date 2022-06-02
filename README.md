@@ -9,10 +9,13 @@ this script initialized git repository and creates an simple template for .net a
 
 ### parameters
 
-- path, the local of the folder of project is created
+- path, the local of project is created
 - solutionName, name of solution the default value is Solution
-- applicationName, name of application the default value is  Solution.App
-- applicationType, type of application, we have mvc and console
+- applicationName, name of application the default value is Solution.App
+- applicationType, type of application (mvc, console ...)
+- sqlFolder, create sql folder in src
+- gitignore, execute 'dotnet new gitignore' in solution folder
+
 
 ### examples
 

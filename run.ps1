@@ -6,10 +6,28 @@ param(
     [ValidateSet('console', 'mvc', 'webapp', 'classlib')]
     [string]$applicationType = "console",
     [switch]$sqlFolder,
-    [switch]$gitignore
+    [switch]$gitignore,
+    [switch]$help
 )
 
 try {
+    if($help.IsPresent){
+        write-host "
+        ### parameters
+
+        -path, the local of project is created
+        -solutionName, name of solution the default value is Solution
+        -applicationName, name of application the default value is Solution.App
+        -applicationType, type of application (mvc, console ...)
+        -sqlFolder, create sql folder in src
+        -gitignore, execute 'dotnet new gitignore' in solution folder
+
+        -help / -h for this
+        "
+
+        return
+    }
+
     if(![string]::IsNullOrWhiteSpace($path)) {
         Set-Location $path
     }
