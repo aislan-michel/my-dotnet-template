@@ -8,17 +8,13 @@ param(
     [switch]$sqlFolder
 )
 
-if($path -eq $null -or $path -eq "" -or $path -eq " ") {
-    mkdir $solutionName
-
-    Set-Location $solutionName
-}else {
+if(![string]::IsNullOrWhiteSpace($path)) {
     Set-Location $path
-
-    mkdir $solutionName
-
-    Set-Location $solutionName
 }
+
+mkdir $solutionName
+
+Set-Location $solutionName
 
 git init
 
