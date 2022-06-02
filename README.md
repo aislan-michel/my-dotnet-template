@@ -13,7 +13,7 @@ this script initialized git repository and creates an simple template for .net a
 - solutionName, name of solution the default value is Solution
 - applicationName, name of application the default value is Solution.App
 - applicationType, type of application (mvc, console ...)
-- sqlFolder, create sql folder in src
+- sqlFolder, create sql folder
 - gitignore, execute 'dotnet new gitignore' in solution folder
 
 
