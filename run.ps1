@@ -3,7 +3,7 @@ param(
     [string]$solutionName = "Solution",
     [string]$applicationName = "Solution.App",
     [Parameter(Position = 0)]
-    [ValidateSet('console', 'mvc')]
+    [ValidateSet('console', 'mvc', 'webapp')]
     [string]$applicationType = "console",
     [switch]$sqlFolder
 )
