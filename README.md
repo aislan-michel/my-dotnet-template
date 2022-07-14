@@ -5,7 +5,7 @@ this script initialized git repository and creates an simple template for .net a
 ### requirements
 
 - git
-- .net SDK of your choice
+- .net SDK of your choice (i recommend .net 5.0+)
 
 ### parameters
 
