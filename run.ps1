@@ -3,7 +3,7 @@ param(
     [string]$solutionName = "Solution",
     [string]$applicationName = "Solution.App",
     [Parameter(Position = 0)]
-    [ValidateSet('console', 'mvc', 'webapp', 'classlib')]
+    [ValidateSet('console', 'mvc', 'webapp', 'classlib', 'webapi')]
     [string]$applicationType = "console",
     [switch]$sqlFolder,
     [switch]$gitignore,
